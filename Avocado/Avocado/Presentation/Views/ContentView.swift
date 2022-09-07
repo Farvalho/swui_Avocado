@@ -22,10 +22,19 @@ struct ContentView: View {
                     } //:HStack
                 } //:ScrollView
                 
+                Text("Avocado dishes")
+                    .fontWeight(.bold)
+                    .font(.system(.title, design:.serif))
+                    .foregroundColor(Color("ColorGreenAdaptive"))
+                    .padding(8)
+                
+                DishesView()
+                    .frame(maxWidth: 640)
+                
                 VStack(alignment: .center, spacing: 20) {
                     Text("All about avocados")
-                        .font(.system(.title, design:.serif))
                         .fontWeight(.bold)
+                        .font(.system(.title, design:.serif))
                         .foregroundColor(Color("ColorGreenAdaptive"))
                         .padding(8)
                     
