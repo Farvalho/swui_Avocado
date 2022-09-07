@@ -15,6 +15,7 @@
 		8B8C529228C8DEB500F5B016 /* RipeningStagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C529128C8DEB500F5B016 /* RipeningStagesView.swift */; };
 		8B8C529428C8DEBE00F5B016 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C529328C8DEBE00F5B016 /* SettingsView.swift */; };
 		8B8C529628C8DECD00F5B016 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C529528C8DECD00F5B016 /* AppView.swift */; };
+		8B8C529828C8E45700F5B016 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C529728C8E45700F5B016 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8B8C529128C8DEB500F5B016 /* RipeningStagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RipeningStagesView.swift; sourceTree = "<group>"; };
 		8B8C529328C8DEBE00F5B016 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8B8C529528C8DECD00F5B016 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		8B8C529728C8E45700F5B016 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		8B8C528A28C8DE6E00F5B016 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				8B8C529928C8E45B00F5B016 /* UI elements */,
 				8B8C528B28C8DE7300F5B016 /* Views */,
 				8B8C528C28C8DE7B00F5B016 /* Resources */,
 			);
@@ -119,6 +122,14 @@
 			children = (
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		8B8C529928C8E45B00F5B016 /* UI elements */ = {
+			isa = PBXGroup;
+			children = (
+				8B8C529728C8E45700F5B016 /* HeaderView.swift */,
+			);
+			path = "UI elements";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 				8B8C529228C8DEB500F5B016 /* RipeningStagesView.swift in Sources */,
 				8B8C527C28C8DA2300F5B016 /* AvocadoApp.swift in Sources */,
 				8B8C529028C8DEAC00F5B016 /* AvocadosView.swift in Sources */,
+				8B8C529828C8E45700F5B016 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
