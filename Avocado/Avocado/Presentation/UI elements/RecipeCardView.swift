@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RecipeCardView: View {
     
+    @State private var showModal: Bool = false
+    
     var recipe: Recipe
     
     var body: some View {
@@ -46,35 +48,9 @@ struct RecipeCardView: View {
                     .foregroundColor(.gray)
                     .italic()
                 
-                HStack(alignment: .center, spacing: 5) {
-                    ForEach(1...(recipe.rating), id: \.self) { _ in
-                        Image(systemName: "star.fill")
-                            .font(.body)
-                            .foregroundColor(.yellow)
-                    } //:ForEach
-                } //:HStack
+                RecipeRatingView(recipe: recipe)
                 
-                HStack(alignment: .center, spacing: 12) {
-                    HStack(alignment: .center, spacing: 2) {
-                        Image(systemName: "person.2")
-                        Text("Serves: \(recipe.serves)")
-                    } //:HStack
-                    
-                    
-                    HStack(alignment: .center, spacing: 2) {
-                        Image(systemName: "clock")
-                        Text("Prep: \(recipe.preparation)")
-                    } //:HStack
-                    
-                    
-                    HStack(alignment: .center, spacing: 2) {
-                        Image(systemName: "flame")
-                        Text("Cooking: \(recipe.cooking)")
-                    } //:HStack
-                    
-                } //:HStack
-                .font(.footnote)
-                .foregroundColor(.gray)
+                RecipeCookingView(recipe: recipe)
             }
             .padding()
             .padding(.bottom, 12)
@@ -83,6 +59,13 @@ struct RecipeCardView: View {
         .background(.white)
         .cornerRadius(12)
         .shadow(color: Color("ColorBlackTransparentLight"), radius: 8, x: 0, y: 0)
+        .onTapGesture {
+            feedback.impactOccurred()
+            showModal = true
+        }
+        .sheet(isPresented: $showModal) {
+            RecipeDetailView(recipe: recipe)
+        }
         
     }
 }
