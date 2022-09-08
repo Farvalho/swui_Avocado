@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B82687528CA299200598EAD /* FacstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B82687428CA299200598EAD /* FacstView.swift */; };
 		8B8C527C28C8DA2300F5B016 /* AvocadoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C527B28C8DA2300F5B016 /* AvocadoApp.swift */; };
 		8B8C527E28C8DA2300F5B016 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C527D28C8DA2300F5B016 /* ContentView.swift */; };
 		8B8C528028C8DA2700F5B016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C527F28C8DA2700F5B016 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B82687428CA299200598EAD /* FacstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacstView.swift; sourceTree = "<group>"; };
 		8B8C527828C8DA2300F5B016 /* Avocado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avocado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8C527B28C8DA2300F5B016 /* AvocadoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoApp.swift; sourceTree = "<group>"; };
 		8B8C527D28C8DA2300F5B016 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				8B8C529728C8E45700F5B016 /* HeaderView.swift */,
 				8B8C529F28C8F11900F5B016 /* DishesView.swift */,
+				8B82687428CA299200598EAD /* FacstView.swift */,
 			);
 			path = "UI elements";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				8B8C529628C8DECD00F5B016 /* AppView.swift in Sources */,
 				8B8C529228C8DEB500F5B016 /* RipeningStagesView.swift in Sources */,
 				8B8C527C28C8DA2300F5B016 /* AvocadoApp.swift in Sources */,
+				8B82687528CA299200598EAD /* FacstView.swift in Sources */,
 				8B8C529028C8DEAC00F5B016 /* AvocadosView.swift in Sources */,
 				8B8C529B28C8EDA600F5B016 /* HeaderModel.swift in Sources */,
 				8B8C529D28C8EDDB00F5B016 /* HeaderData.swift in Sources */,
