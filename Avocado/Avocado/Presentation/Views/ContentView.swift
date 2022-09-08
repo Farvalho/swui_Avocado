@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     var headers: [Header] = headerData
+    var facts: [Fact] = factData
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -30,6 +31,25 @@ struct ContentView: View {
                 
                 DishesView()
                     .frame(maxWidth: 640)
+                
+                Text("Avocado facts")
+                    .fontWeight(.bold)
+                    .font(.system(.title, design:.serif))
+                    .foregroundColor(Color("ColorGreenAdaptive"))
+                    .padding(8)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .top, spacing: 60) {
+                        ForEach(facts) { fact in
+                            FactView(fact: fact)
+                            
+                        } //:ForEach
+                    } //:HStack
+                    .padding(.vertical)
+                    .padding(.leading, 60)
+                    .padding(.trailing, 20)
+                    
+                } //:ScrollView
                 
                 VStack(alignment: .center, spacing: 20) {
                     Text("All about avocados")
@@ -57,6 +77,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(headers: headerData)
+        ContentView(headers: headerData, facts: factData)
     }
 }
