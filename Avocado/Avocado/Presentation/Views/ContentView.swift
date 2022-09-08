@@ -11,6 +11,7 @@ struct ContentView: View {
     
     var headers: [Header] = headerData
     var facts: [Fact] = factData
+    var recipes: [Recipe] = recipeData
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -51,6 +52,20 @@ struct ContentView: View {
                     
                 } //:ScrollView
                 
+                Text("Avocado recipes")
+                    .fontWeight(.bold)
+                    .font(.system(.title, design:.serif))
+                    .foregroundColor(Color("ColorGreenAdaptive"))
+                    .padding(8)
+                
+                VStack(alignment: .center, spacing: 20) {
+                    ForEach(recipes) { recipe in
+                        RecipeCardView(recipe: recipe)
+                    }
+                }
+                .frame(maxWidth: 640)
+                .padding(.horizontal)
+                
                 VStack(alignment: .center, spacing: 20) {
                     Text("All about avocados")
                         .fontWeight(.bold)
@@ -77,6 +92,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(headers: headerData, facts: factData)
+        ContentView(headers: headerData, facts: factData, recipes: recipeData)
     }
 }
